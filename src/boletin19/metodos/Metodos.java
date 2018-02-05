@@ -95,6 +95,7 @@ public class Metodos {
                 isbn.remove(i);
                 precios.remove(i);
                 numUnidades.remove(i);
+                c--;
             }
         }
     }
