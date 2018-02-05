@@ -66,7 +66,8 @@ public class Metodos {
             System.out.println(numUnidades.get(i));
         }
     }
-
+    
+    //poner numUnidades a 0
     static public void vender(String titulo) {
         for (int i = 0; i < titulos.size(); i++) {
 
