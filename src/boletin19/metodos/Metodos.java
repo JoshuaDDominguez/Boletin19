@@ -67,13 +67,19 @@ public class Metodos {
         }
     }
 
-    //falta excepcion de venta en negativo
     static public void vender(String titulo) {
         int cantidad = Integer.parseInt(JOptionPane.showInputDialog("Cantidad que se vendio?"));
         for (int i = 0; i < titulos.size(); i++) {
-
             if (titulos.get(i).equalsIgnoreCase(titulo)) {
-                numUnidades.set(i, numUnidades.get(i) - cantidad);
+                do {
+                    if (numUnidades.get(i) < cantidad) {
+                        JOptionPane.showConfirmDialog(null, "Falta stock");
+                        cantidad = Integer.parseInt(JOptionPane.showInputDialog("Cantidad nueva?"));
+                    }
+                } while (numUnidades.get(i) < cantidad);
+                {
+                    numUnidades.set(i, numUnidades.get(i) - cantidad);
+                }
             } else {
                 System.out.println("Titulo no encontrado");
             }
