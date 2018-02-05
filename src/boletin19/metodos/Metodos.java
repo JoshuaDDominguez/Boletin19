@@ -66,17 +66,14 @@ public class Metodos {
             System.out.println(numUnidades.get(i));
         }
     }
-    
-    //poner numUnidades a 0
+
+    //falta excepcion de venta en negativo
     static public void vender(String titulo) {
+        int cantidad = Integer.parseInt(JOptionPane.showInputDialog("Cantidad que se vendio?"));
         for (int i = 0; i < titulos.size(); i++) {
 
             if (titulos.get(i).equalsIgnoreCase(titulo)) {
-                titulos.remove(i);
-                autores.remove(i);
-                isbn.remove(i);
-                precios.remove(i);
-                numUnidades.remove(i);
+                numUnidades.set(i, numUnidades.get(i) - cantidad);
             } else {
                 System.out.println("Titulo no encontrado");
             }
