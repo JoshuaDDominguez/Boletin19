@@ -45,11 +45,11 @@ public class Metodos {
         for (int i = 0; i < titulos.size(); i++) {
 
             if (titulos.get(i).equalsIgnoreCase(titulo)) {
-                System.out.println(titulos.get(i));
-                System.out.println(autores.get(i));
-                System.out.println(isbn.get(i));
-                System.out.println(precios.get(i));
-                System.out.println(numUnidades.get(i));
+                System.out.println("Titulo: "+titulos.get(i));
+                System.out.println("Autor: "+autores.get(i));
+                System.out.println("ISBN: "+isbn.get(i));
+                System.out.println("Precio: "+precios.get(i));
+                System.out.println("Unidades en stock: "+numUnidades.get(i));
             } else {
                 System.out.println("Titulo no encontrado");
             }
@@ -59,11 +59,12 @@ public class Metodos {
 
     static public void amosarTodo() {
         for (int i = 0; i < titulos.size(); i++) {
-            System.out.println(titulos.get(i));
-            System.out.println(autores.get(i));
-            System.out.println(isbn.get(i));
-            System.out.println(precios.get(i));
-            System.out.println(numUnidades.get(i));
+            System.out.println("LIBRO "+(i+1)+":");
+            System.out.println("Titulo: "+titulos.get(i));
+            System.out.println("Autor: "+autores.get(i));
+            System.out.println("ISBN: "+isbn.get(i));
+            System.out.println("Precio: "+precios.get(i));
+            System.out.println("Unidaes en stock: "+numUnidades.get(i));
         }
     }
 
